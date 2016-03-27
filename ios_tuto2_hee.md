@@ -45,7 +45,7 @@
 private var heeCount: Int = 0
 
 @IBAction func heeAction() {
-    heeCount += 1;
+    heeCount += 1
     label.text = "\(heeCount)へぇ"
 }
 ```
