@@ -1,23 +1,53 @@
+# 作ってみよう1 へぇボタン
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.png?raw=true)
+
 # 新規プロジェクトからsingle view projectを作る
 
 # Storyboardに部品を置く
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/add_button.png?raw=true)
+- UIButton
+- UILabel
 
 # AutoLayoutを設定する
-- Update Framesをして表示を確認しよう
+- 位置を調整
+- サイズやマージンを調整
+- 適当にデザインしてみよう
+- 下のようにAutoLayoutと見た目が異なる警告が表示されたらUpdate Frames(`alt + cmd + =`)をして表示を確認しよう
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/add_button.png?raw=true)
 
 # ソースコードと紐付ける準備
 - IBOutletはUI部品と紐付ける
 - IBActionはアクションだけを紐付ける
 
+```Swift
+@IBOutlet var label: UILabel!
+@IBAction func heeAction() {
+    // 後で書く
+}
+```
+
 # ソースコードと紐付ける
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/binding_ib.png?raw=true)
 
 # アクションを書く
+
+```swift
+private var heeCount: Int = 0
+
+@IBAction func heeAction() {
+    heeCount += 1;
+    label.text = "\(heeCount)へぇ"
+}
+```
 
 # まとめ 学んだこと
 - Storyboard/InterfaceBuilder
 - AutoLayout
 - ソースコードとStoryboardとひも付け
+- 基本はOK! あとは先ほど挙げたサイトなどを見て自分の力でできます!
 
-# 終わり
-- 音を出したくなりますよね？
-- 音素材作っておきました^^ http://pokosho.com/b/archives/2508
+## 音を出したくなりますよね？
+- 音素材作っておきました^^
+  - https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.wav
+  - https://github.com/kaibadash/ios_tutorial/blob/master/img/haa.wav
+- AVFoundationという別の部品を使うと思いますが、怖くないよ。

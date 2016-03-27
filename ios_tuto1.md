@@ -10,9 +10,9 @@
 - リッチなフロントエンド部品を提供
 - ウェブアプリだとHTMLとJSでやるとこ
 - AppleのSDKは*Kitの名前がついてるのが多い
-- Model View Controller
+- MVC
 
-TODO:写真
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/uikit.PNG?raw=true)
 
 # ちなみにiOSでできること
 - iOSはFreeBSDベース
@@ -21,41 +21,42 @@ TODO:写真
 - 可能性は無限大。夢がひろがりんぐ。
 
 # 1ページでわかった気になるSwift
-スクリプト言語っぽいけど、コンパイルされる静的言語です。
-```swift
-class Animal {
-  private let hello: String = "Hello" // 定数
-  var name: String = "hoge" // 変数
+- スクリプト言語っぽいけど、コンパイルされる静的言語です。
+  - コンパイラが色々教えてくれる
+- `let` は定数
+- `var` は定数
+- `?` がついてる型はnil許容型
+  - `nil` でないことを承知の上で `!` をつけてアクセスするか
+  - `user?.name` のように `nil` の場合無視するようにするか
 
-  func hello(animal: Animal?) -> void {
-    return animal?.name + "," + hello
-    // こう書いても良いが短いほうが良いよね
-    if animal != null {
-      return animal!.name + "," + hello
-    }
-  }
-}
-```
-
-# ボタンとかの部品
+# 基本的な部品
+- UIView
+- UILabel
+- UIButton
+- UITextField
+- UISwitch
+- UISlider
+- etc...
 
 # UIViewController
+- 1画面を管理する
 
 # UINavigationController
+- 複数のUIViewControllerを積み上げる形で管理する
+- push/popで画面遷移
 
 # UITabBarController
-
-# 画面部品まとめ
+- 複数のUIViewControllerをtab barに紐づく形で管理する
 
 # UITableView / UICollectionView
-- 省メモリ
-- 10000行あってもViewは表示する分だけしか作られずスムーズに表示できる
+- 10000行あってもViewは表示する分だけしか作られずスムーズに表示でき省メモリ
 - 標準で何種類かUITableViewCellがある
 
 # StoryboardとInterfaceBuilder(IB)
 - GUIで画面を作成できる
 - [個人的にはStoryboardは嫌い](http://pokosho.com/b/archives/1826)。
   - チームでやるならIB!
+- 全部コードで書くこともできる
 
 # AutoLayout
 - 様々な画面サイズに対応する仕組み
@@ -65,7 +66,7 @@ class Animal {
 
 # iOSハマりどころ1
 - iOSはユーザフレンドリーなのに、開発者には不親切
-  - Developer登録のためのアカウントを日本語で入力するとエラーで進めず、メールを送ることになる
+  - Developer登録時、日本語で入力するとエラーで進めず、メールを送ることになる
   - 巨大な企業なのにびっくりするくらいアナログ(メール、電話大好き)
   - そしてGmailだとAppleからのメールがスパム扱いされたり
   - リファクタリングのメニューはでるのにSwiftだとできない
@@ -73,8 +74,7 @@ class Animal {
   - 急に低レベルになることがある
     - OSSは積極的かつ慎重に使っていくべき
   - 気軽にバイナリを動かせない
-    - AppStoreに出したバイナリがテスト環境を向いていないか不安になってきた…
-  - デフォルト言語を後から変更できない
+  - Storeリリース時、プライマリ言語は英語にしよう
 
 # iOSハマりどころ2
 - 聖書ヒューマンインタフェースガイドラインに背くとリジェクト
@@ -86,23 +86,14 @@ class Animal {
 - 実機でしか起こらない問題がまれによくある
 
 # 参考になるサイト
-(必読!)ヒューマンインタフェースガイドライン
-https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG/
-公式の日本語ドキュメント
-https://developer.apple.com/jp/documentation/
-公式のリファレンス
-https://developer.apple.com/library/ios
-API Diffs
-https://developer.apple.com/library/ios/releasenotes/General/iOS93APIDiffs/index.html
-はてな教科書(最近更新された！)
-https://github.com/hatena/Hatena-Textbook
-堤さんの最近のホッテントリに初心者向けの内容あり
-http://d.hatena.ne.jp/shu223/20160320/1458434042
-cocoapods ライブラリ管理
-https://cocoapods.org/
-cocoacontrols UIライブラリが探せる
-https://www.cocoacontrols.com/
-fabric TwitterがCrashlyticsを買収した。クラッシュログ分析、アプリ配布、分析。
-https://get.fabric.io/
-fastlane 自動化を考える際に。
-https://github.com/fastlane/fastlane
+- [(必読!)ヒューマンインタフェースガイドライン](
+https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG/)
+- [公式の日本語ドキュメント](https://developer.apple.com/jp/documentation/)
+- [公式のリファレンス](https://developer.apple.com/library/ios)
+- [API Diffs](https://developer.apple.com/library/ios/releasenotes/General/iOS93APIDiffs/)
+- [はてな教科書(最近更新された！)](https://github.com/hatena/Hatena-Textbook)
+- [堤さんの最近のホッテントリに初心者向けの内容あり](http://d.hatena.ne.jp/shu223/20160320/1458434042)
+- [cocoapods ライブラリ管理](https://cocoapods.org/)
+- [cocoacontrols UIライブラリが探せる](https://www.cocoacontrols.com/)
+- [fabric TwitterがCrashlyticsを買収した。クラッシュログ分析、アプリ配布、分析。](https://get.fabric.io/)
+- [fastlane 自動化を考える際に](https://github.com/fastlane/fastlane)
