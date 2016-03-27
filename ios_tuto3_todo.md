@@ -25,7 +25,7 @@
 
 # StoryboardでUIを作る
 - 右上UINavigationControllerのバー(UINavigationBar)に追加ボタン
-　- `Navigation Item` を置き、その中に `Bar Button Item`を置く
+  - `Navigation Item` を置き、その中に `Bar Button Item`を置く
 - タイトルやデザインは好みに設定してみよう
 
 # 一覧画面の作成 UITableViewControllerを使う1
@@ -71,7 +71,7 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
 # TODOクラスを作る
 シンプルにタイトルだけ。
 いずれ、優先度や期限をつけても面白いかもしれませんね。
-```
+```swift
 class ToDo {
     var title: String = ""
 
@@ -82,7 +82,7 @@ class ToDo {
 ```
 
 # 新しいTODOを作ってリストで管理する
-```
+```swift
 private var todoList: [ToDo] = [ToDo]()
 
 @IBAction func addTodo() {
@@ -129,16 +129,22 @@ cell!.textLabel!.text = todo.title
 
 ## Segueの設定(本当はやらなくても良いけど…)
 `ViewController`の黄色のアイコンを`ctrl`を押しながらドラッグし、`TodoEditController`に接続します。
-![](https://github.com/kaibadash/ios_tutorial/blob/master/img/todo1.png?raw=true)
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/segue.png?raw=true)
 
 # 画面遷移のアクション
 
 TodoEditControllerにToDoを1つ渡せるようにしておきます。
 ```swift
 var todo: ToDo? = nil
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // textViewに現在のToDoを反映する
+    self.textView.text = todo?.title
+}
 ```
 
-cellをタップした時の処理で、`TodoEditController`に選択したToDoを渡して画面遷移します。
+`ViewController`のcellをタップした時の処理で、`TodoEditController`に選択したToDoを渡して画面遷移します。
 ```swift
 override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let todo: ToDo = todoList[indexPath.row]
@@ -172,6 +178,7 @@ override func viewWillAppear(animated: Bool) {
 
 # 削除
 次は削除ですが、親に伝える必要があり、一工夫必要です。
+
 `TodoEditController.swift`にインタフェース(protocol)を定義し、親の参照を持ち、親に削除を伝えるようにしてみます。
 
 ```swift
@@ -220,7 +227,9 @@ func deleteTodo(todo: ToDo) {
 - protocolの使い方
 
 # 終わり
-- かなり駆け足で難しくなってしまった感がありますが、UITableViewはよく使う部品ですので表現できるものが多いはずです！
+- かなり駆け足で難しくなってしまった感がありますが、UITableViewはよく出来た部品で使う場面も多いはずです。
+- タイル上に表示するUICollectionViewも似たような作りになってます。
 - アプリを終了するとデータが消えてしまいます…
-  - サーバサイドを実装してAPIを使ったり
+  - 設定ファイルに保存してiCloudに入れたり
   - ローカルのデータベース(realm, SQLite)に保存したり
+  - サーバサイドを実装してAPIを使ったり
