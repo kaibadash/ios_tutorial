@@ -4,12 +4,17 @@
 アプリの説明は要りませんね。
 ![](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.png?raw=true)
 
+[ソースコード](https://github.com/kaibadash/ios_tutorial/tree/master/Trivia)もありますので、迷ったら見てみてください。
+
 # 新規プロジェクトからsingle view projectを作る
+`shift + cmd + n`
 
 # Storyboardに部品を置く
 ![](https://github.com/kaibadash/ios_tutorial/blob/master/img/add_button.png?raw=true)
 - UIButton
+  - へぇボタン
 - UILabel
+  - へぇカウント
 
 # AutoLayoutを設定する
 - 位置を調整
@@ -54,10 +59,13 @@ private var heeCount: Int = 0
 - Storyboard/InterfaceBuilder
 - AutoLayout
 - ソースコードとStoryboardとひも付け
-- 基本はOK! あとは先ほど挙げたサイトなどを見て自分の力でできます!
+- 基本はOK! あとは先ほど挙げたサイトなどを見て独り立ちできるはず!
 
 ## 音を出したくなりますよね？
-- 音素材作っておきました^^
+- フリー音素材作っておきました^^
   - [へぇ〜](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.wav)
   - [はぁ?](https://github.com/kaibadash/ios_tutorial/blob/master/img/haa.wav)
 - AVFoundationという別の部品を使うと思いますが、怖くないよ。
+
+# 次章
+[作ってみよう2 TODO管理アプリ](ios_tuto2.md)

@@ -4,7 +4,7 @@
 # おしながき
 - UIKit紹介など
 - 作ってみよう1 へぇボタン
-- 作ってみよう2 TODOアプリ
+- 作ってみよう2 TODO管理アプリ
 
 # iOSでできることはたくさんあるけど今日はUIKit
 - リッチなフロントエンド部品を提供
@@ -87,7 +87,7 @@
 
 # 参考になるサイト
 - [(必読!)ヒューマンインタフェースガイドライン](
-https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG/)
+https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG/) 違反するとリジェクト。一番多い理由はこれの違反かもしれない。
 - [公式の日本語ドキュメント](https://developer.apple.com/jp/documentation/)
 - [公式のリファレンス](https://developer.apple.com/library/ios)
 - [API Diffs](https://developer.apple.com/library/ios/releasenotes/General/iOS93APIDiffs/)
@@ -97,3 +97,6 @@ https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG
 - [cocoacontrols UIライブラリが探せる](https://www.cocoacontrols.com/)
 - [fabric TwitterがCrashlyticsを買収した。クラッシュログ分析、アプリ配布、分析。](https://get.fabric.io/)
 - [fastlane 自動化を考える際に](https://github.com/fastlane/fastlane)
+
+# 次章
+[作ってみよう1 へぇボタン](ios_tuto2.md)
