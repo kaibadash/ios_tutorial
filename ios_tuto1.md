@@ -1,5 +1,5 @@
 # iOSアプリのハマりどころ、UIKitの紹介
-## @kaiba
+## [@kaiba](https://twitter.com/kaiba)
 
 # おしながき
 - UIKit紹介など
