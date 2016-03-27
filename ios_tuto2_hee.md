@@ -32,6 +32,11 @@
 ```
 
 # ソースコードと紐付ける
+- 紐付けたい部品を選択して
+- →アイコンを選択
+- ソースコードで定義した名前が見えるので、`◯`をD&D
+- ボタンのイベントは通常 `Touch up inside`
+
 ![](https://github.com/kaibadash/ios_tutorial/blob/master/img/binding_ib.png?raw=true)
 
 # アクションを書く
@@ -53,6 +58,6 @@ private var heeCount: Int = 0
 
 ## 音を出したくなりますよね？
 - 音素材作っておきました^^
-  - https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.wav
-  - https://github.com/kaibadash/ios_tutorial/blob/master/img/haa.wav
+  - [へぇ〜](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.wav)
+  - [はぁ?](https://github.com/kaibadash/ios_tutorial/blob/master/img/haa.wav)
 - AVFoundationという別の部品を使うと思いますが、怖くないよ。
