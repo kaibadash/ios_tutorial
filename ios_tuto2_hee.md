@@ -1,4 +1,7 @@
 # 作ってみよう1 へぇボタン
+
+トリビアアプリ(笑)を一緒に作りましょう。
+アプリの説明は要りませんね。
 ![](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.png?raw=true)
 
 # 新規プロジェクトからsingle view projectを作る
@@ -12,7 +15,9 @@
 - 位置を調整
 - サイズやマージンを調整
 - 適当にデザインしてみよう
-- 下のようにAutoLayoutと見た目が異なる警告が表示されたらUpdate Frames(`alt + cmd + =`)をして表示を確認しよう
+- 下のようにAutoLayoutと見た目が異なる警告が表示されたらUpdate Frames
+  - `alt + cmd + =`
+
 ![](https://github.com/kaibadash/ios_tutorial/blob/master/img/add_button.png?raw=true)
 
 # ソースコードと紐付ける準備
