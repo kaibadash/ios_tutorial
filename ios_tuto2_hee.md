@@ -29,8 +29,8 @@
 
 
 # ソースコードと紐付ける準備
-- IBOutletはUI部品と紐付ける
-- IBActionはアクションだけを紐付ける
+- `@IBOutlet`はUI部品と紐付ける
+- `@IBAction`はアクションだけを紐付ける
 
 ```Swift
 @IBOutlet var label: UILabel!
@@ -58,17 +58,23 @@ private var heeCount: Int = 0
 }
 ```
 
+動作させてみましょう！
+
 # まとめ 学んだこと
 - Storyboard/InterfaceBuilder
 - AutoLayout
 - ソースコードとStoryboardとひも付け
 - 基本はOK! あとは先ほど挙げたサイトなどを見て独り立ちできるはず!
 
-## 音を出したくなりますよね？
+# 宿題
+
+## へぇ〜ボタンの画像を設定したいですよね
+
+## 音を鳴らしたいですよね？
 - フリー音素材作っておきました^^
   - [へぇ〜](https://github.com/kaibadash/ios_tutorial/blob/master/img/hee.wav)
   - [はぁ?](https://github.com/kaibadash/ios_tutorial/blob/master/img/haa.wav)
 - AVFoundationという別の部品を使うと思いますが、怖くないよ。
 
 # 次章
-[作ってみよう2 TODO管理アプリ](ios_tuto3_todo.md)
+[作ってみよう1.5 画面遷移](ios_tuto1.5_storyboard.md)
