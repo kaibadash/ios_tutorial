@@ -23,7 +23,10 @@
 - 下のようにAutoLayoutと見た目が異なる警告が表示されたらUpdate Frames
   - `alt + cmd + =`
 
-![](https://github.com/kaibadash/ios_tutorial/blob/master/img/add_button.png?raw=true)
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/autolayout.png?raw=true)
+
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/autolayout_update.png?raw=true)
+
 
 # ソースコードと紐付ける準備
 - IBOutletはUI部品と紐付ける
