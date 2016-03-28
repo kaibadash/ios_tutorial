@@ -68,4 +68,4 @@ private var heeCount: Int = 0
 - AVFoundationという別の部品を使うと思いますが、怖くないよ。
 
 # 次章
-[作ってみよう2 TODO管理アプリ](ios_tuto2.md)
+[作ってみよう2 TODO管理アプリ](ios_tuto3_todo.md)

@@ -41,16 +41,27 @@
 # UIViewController
 - 1画面を管理する
 
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/vc.png?raw=true)
+
 # UINavigationController
 - 複数のUIViewControllerを積み上げる形で管理する
 - push/popで画面遷移
 
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/navigation_vc.png?raw=true)
+
 # UITabBarController
 - 複数のUIViewControllerをtab barに紐づく形で管理する
+
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/tab.png?raw=true)
+
+# よくある画面構成
+
+![](https://github.com/kaibadash/ios_tutorial/blob/master/img/tab_nav.png?raw=true)
 
 # UITableView / UICollectionView
 - 10000行あってもViewは表示する分だけしか作られずスムーズに表示でき省メモリ
 - 標準で何種類かUITableViewCellがある
+- これを覚えると色々作れる
 
 # StoryboardとInterfaceBuilder(IB)
 - GUIで画面を作成できる
@@ -99,4 +110,4 @@ https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG
 - [fastlane 自動化を考える際に](https://github.com/fastlane/fastlane)
 
 # 次章
-[作ってみよう1 へぇボタン](ios_tuto2.md)
+[作ってみよう1 へぇボタン](ios_tuto2_hee.md)
