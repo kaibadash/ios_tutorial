@@ -6,7 +6,7 @@ Storyboardが難しかったため、補足。
 
 # Storyboardに画面を配置
 - StoryboardからUIViewControllerを全部消す
-- UITabBarControllerを置く
+- UITabBarControllerを置き、`Is initial view controller`をチェック。最初の画面に設定する。
 - UIViewControllerを置き、viewに適当に色を付ける
 - UIViewControllerをもう一つ置き、viewに適当に色を付ける
 
