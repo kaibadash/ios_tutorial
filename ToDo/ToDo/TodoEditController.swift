@@ -29,11 +29,11 @@ class TodoEditController: UIViewController {
     
     @IBAction func saveAction() {
         todo?.title = textView.text!
-        navigationController?.popViewControllerAnimated(true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func deleteAction() {
-        delegate!.deleteTodo(todo!)
-        navigationController?.popViewControllerAnimated(true)
+        delegate!.deleteTodo(todo: todo!)
+        _ = navigationController?.popViewController(animated: true)
     }
 }
